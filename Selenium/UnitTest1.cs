@@ -45,18 +45,15 @@ namespace Selenium_Testing
         {
             try
             {
-                // Navigate to the page
                 driver.Navigate().GoToUrl("https://arkadikorotots22.thkit.ee");
 
                 System.Threading.Thread.Sleep(1000);
 
-                // Click the "Tˆˆd" button
                 var toodButton = driver.FindElement(By.CssSelector("#btn3"));
                 toodButton.Click();
 
                 System.Threading.Thread.Sleep(1000);
 
-                // Click the "jsleht" link in the modal
                 var jslehtLink = driver.FindElement(By.CssSelector("#myModal2 > div > div.modal-body > nav > ul > li:nth-child(12) > a"));
                 jslehtLink.Click();
 
@@ -161,7 +158,7 @@ namespace Selenium_Testing
 
                     var logiSisseSubmitButton = driver.FindElement(By.CssSelector("input[type='submit']"));
                     logiSisseSubmitButton.Click();
-                    Assert.That(driver.Title, Is.EqualTo("Tantsud t‰htedega"), "Error, page title is not correct after login.");
+                    Assert.That(driver.Title, Is.EqualTo("Tantsud t√§htedega"), "Error, page title is not correct after login.");
                     System.Threading.Thread.Sleep(1000);
                 }
                 catch (Exception ex)
